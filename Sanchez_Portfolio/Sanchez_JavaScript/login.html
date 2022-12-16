@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ViVyD Studios - Login</title>
+</head>
+<body style="background-image: url(imgs/main-bg.jpg); background-size: cover;">
+
+<center>
+	<header style="padding-top: 10px; font-size:150px "> ViVYD</header>
+	<header style="padding-bottom: 40px; font-size:50px">S   T   U   D   I   O   S</header>
+
+<h3>LOGIN</h3>
+	<form id="login" onsubmit="submit_login()">
+		<table cellspacing="3" cellpadding="10">
+			<tr>
+				<td>Username</td>
+				<td>
+					<input type="text" placeholder="Enter your username" id="user1">
+				</td>
+			</tr>
+				<td>Password</td>
+				<td>
+					<input type="Password" placeholder="Enter your password" id="pass1">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Log In" id="submit" onclick="confirm_login()">
+				</td>
+				<td >
+					<input type="reset" value="Clear"/>
+				</td>
+				<td>
+					<input type="button" value="Sign Up" onclick="create()">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</center>
+
+<script type="text/javascript">
+	
+	document.getElementById("login").reset();
+
+	function confirm_login(){
+		var username = document.getElementById("user1").value;
+		var password = document.getElementById("pass1").value;
+	if (username == "username" && password == "1234567") {
+		alert ("Login Successful!");
+		window.location = "home.html";
+		return false;
+	} 
+	else {
+		alert ("Non-Existent or Incorrect Username and/or Password.");
+		return false;
+	}
+	}
+
+	function submit_login(){
+		alert ("Login Successful!");
+	}
+	function create(){
+		window.location = "signup.html";
+	}
+</script>
+
+
+</body>
+</html>

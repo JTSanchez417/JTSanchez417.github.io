@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ViVYD Studios - Sign Up</title>
+</head>
+
+<body style="background-image: url(imgs/main-bg.jpg); background-size: cover;">
+
+<center>
+	<header style="padding-top: 10px; font-size:150px "> ViVYD</header>
+	<header style="padding-bottom: 40px; font-size:50px">S   T   U   D   I   O   S</header>
+
+<h3>SIGN UP</h3>
+	<form id="signup">
+		<table cellspacing="3" cellpadding="10">
+			<tr>
+				<td>Username (Letters only)</td>
+				<td>
+					<input type="text" placeholder="Enter your username" id="name1">
+				</td>
+			</tr>
+				<td>Email</td>
+				<td>
+					<input type="text" placeholder="Enter your E-mail" id="email1">
+				</td>
+			</tr>
+			</tr>
+				<td>Set Password</td>
+				<td>
+					<input type="Password" placeholder="Enter your password" id="pass1">
+				</td>
+			</tr>
+			</tr>
+				<td>Confirm Password</td>
+				<td>
+					<input type="Password" placeholder="Confirm your password" id="confirmpass1">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Sign Up" onclick="sign_up()">
+				</td>
+				<td >
+					<input type="reset" value="Clear">
+				</td>
+				<td >
+					<input type="button" value="Back to Login" onclick="login()">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+<script type="text/javascript">
+	
+	document.getElementById("signup").reset();
+
+	function sign_up(){
+		var n = document.getElementById("name1").value;
+		var e = document.getElementById("email1").value;
+		var p = document.getElementById("pass1").value;
+		var cp = document.getElementById("confirmpass1").value;
+
+		var letters = /^[A-Za-z]+$/;
+		var email_verif = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if (n=='' || e=='' || p=='' || cp==''){
+			alert ("Please enter what is required correctly.");
+		} else if (!letters.test(n)){
+			alert ("Invalid username input. Must contain letters only.")
+		} else if (!email_verif.test(e)){
+			alert ("Invalid email input. Please enter valid email account.")
+		} else if (p!=cp) {
+			alert ("Passwords did not match.")
+		} else {
+			alert ("Account successfully created. Welcome to ViVYD Studios!"); window.location = "home.html";
+		}
+	}
+
+	function login(){
+		window.location = "login.html";
+	}
+
+</script>
+
+</body>
+</html>

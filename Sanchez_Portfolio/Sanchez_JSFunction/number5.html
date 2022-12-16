@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<p id="combine"></p>
+
+
+<script type="text/javascript">
+let possCombin = (str) =>{
+    let combinations = [];
+      for(let i = 0 ;i < str.length; i++)
+    {
+        for(let j = i + 1; j< str.length + 1; j++)
+        {
+            combinations.push(" " + str.slice(i , j));
+        }
+    }
+   return combinations;
+}
+const string = prompt('Enter a string: ');
+const result = possCombin(string);
+const disp = prompt("All combinations of the given string: " + result);
+
+	
+</script>2
+
+</body>
+</html>

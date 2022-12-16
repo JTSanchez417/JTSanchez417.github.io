@@ -1,0 +1,16 @@
+a:hover {
+	background-color: lightblue;
+}
+
+a {
+	color: purple;
+	font-size: 	25px;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav {
+	border:  2px;
+	background-color: lightcyan;
+	padding: 12px;
+	text-decoration: none;
+}

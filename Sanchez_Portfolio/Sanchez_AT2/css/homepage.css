@@ -1,0 +1,72 @@
+*{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+nav{
+	width: 100%; height: 15vh;
+	background: lightgreen;
+	text-decoration: none;
+	align-items: center;
+	display: flex; justify-content: space-between;
+}
+a:hover {
+	background-color: lightblue;
+}
+a {
+	color: blueviolet;
+	font-size: 	19px;
+	padding: 15px 15px;
+	text-decoration: none;
+}
+body{
+	background-image: ;
+	background: transparent;
+}
+	nav .logo{
+		width: 25%; text-align: center;
+}
+.section{
+	background-color: lightblue;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px;
+	margin: 10rem auto p auto;
+}
+.section h1{
+	margin: 0;
+}
+
+.sectiontwo{
+	background-color: lightseagreen;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px;
+	margin: 10rem auto p auto;
+}
+.sectionthree{
+	background-color: lightblue;
+	padding: 40px;
+	margin: 10rem auto p auto;
+}
+.sectionfour{
+	background-color: lightseagreen;
+	padding: 40px;
+	margin: 10rem auto p auto;
+}
+.sectionfive{
+	background-color: lightblue;
+	padding: 40px;
+	margin: 10rem auto p auto;
+}
+.head1{
+	float: left;
+}
+.descrip1{
+	float: right;
+}
+.head2{
+	float: left;
+}
+.descrip2{
+	float: right;
+}

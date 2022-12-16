@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>	
+<p id="reverse"></p>
+
+
+<script type="text/javascript">
+function reverseString(str) {
+  var splitString = str.split("");
+  var reverseArray = splitString.reverse();
+  var joinArray = reverseArray.join("");
+  return joinArray;
+}
+
+const string = prompt('Enter a list of numbers (no comma needed): ');
+const result = reverseString(string);
+const disp = prompt("The reversed string is: " + result);
+
+	
+</script>
+
+</body>
+</html>

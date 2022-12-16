@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<p id='demo'></p>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click Me to Display Date and Time.</button>
+
+<table cellpadding="10" cellspacing="10">
+	<tr>
+		<td style="background: limegreen;">
+			<p>Year: <span id="year"></span></p>
+		</td>
+		<td style="background: limegreen;">
+			<p>Month: <span id="month"></span></p>
+		</td>
+		<td style="background: limegreen;">
+			<p>Day: <span id="currentday"></span></p>
+		</td>
+		<td style="background: limegreen;">
+			<p>Hours: <span id="hours"></span></p>
+		</td>
+		<td style="background: limegreen;">
+			<p>Minutes: <span id="minutes"></span></p>
+		</td>
+		<td style="background: limegreen;">
+			<p>Seconds: <span id="seconds"></span></p>
+		</td>
+	</tr>
+</table>
+
+
+<p id = 'greet'></p>
+<p id = 'day'></p>
+<p id = 'food'></p>
+
+<script type="text/javascript">
+	const date = new Date();
+
+	const n = date.toDateString();
+	console.log('Date' + date);
+
+	var display = new Date();
+	document.getElementById('year').innerHTML = display.getFullYear();
+	document.getElementById('month').innerHTML = display.getMonth();
+	document.getElementById('currentday').innerHTML = display.getDay();
+	document.getElementById('hours').innerHTML = display.getHours();
+	document.getElementById('minutes').innerHTML = display.getMinutes();
+	document.getElementById('seconds').innerHTML = display.getSeconds();
+
+	const time = new Date().getHours();
+	let greeting;
+	if (time < 11) {
+		greeting = "Hello, Good Morning!";
+	} else if (time < 17) {
+		greeting = "Hello, Good Afternoon!";
+	} else {
+		greeting = "Hello, Good Evening!";
+	}
+	document.getElementById('greet').innerHTML = greeting;
+
+	let day;
+	switch(new Date().getDay()) {
+	case 0:
+		day = "Sunday";
+		break;
+	case 1:
+		day = "Monday";
+		break;
+	case 2:
+		day = "Tuesday";
+		break;
+	case 3:
+		day = "Wednesday";
+		break;
+	case 4:
+		day = "Thursday";
+		break;
+	case 5:
+		day = "Friday";
+		break;
+	case 6:
+		day = "Saturday";
+		break;
+	}
+	document.getElementById('day').innerHTML = "Today is: " + day;
+
+
+
+	var favFood = prompt("Please input a food/drink/snack:")
+	switch(favFood){
+	case "Beef Loaf":
+		alert ("Beef Loaf is my favorite!");
+		break;
+	case "Ice Cream":
+		alert ("Ice Cream is my favorite!");
+		break;
+	case "Spanish Bread":
+		alert ("Spanish Bread is my favorite!");
+		break;
+	case "Dunkin Donuts":
+		alert ("Dunkin' Donuts is my favorite!");
+		break;
+	default:
+		alert ("FavFood Not Found.");
+	}
+	document.getElementById("food").innerHTML = alert;
+
+</script>
+
+</body>
+</html>
